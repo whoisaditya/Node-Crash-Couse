@@ -7,7 +7,7 @@ const User = require('./models/user');
 const app = express();
 
 //connect to mongodb 
-const dbUrI = 'mongodb+srv://whoisaditya:4bIm4asQzmCbSJ9i@cluster0.0eoza.mongodb.net/am?retryWrites=true&w=majority';
+const dburi = process.env.DB_URI;
 
 mongoose.connect(dbUrI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => app.listen(3000)) //listen for requests 
